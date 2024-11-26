@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container text-start">
+        <h2>{{ title }}</h2>
+        <p>{{ about_text }}</p>
+    </div>
+    <div class="container text-start">
+        <h2>Наши контакты</h2>
+        <p>Адрес: {{ contact_info.address }}</p>
+        <p>Телефон: {{ contact_info.phone }}</p>
+        <p>Email: {{ contact_info.email }}</p>
+    </div>
+    <div class="container">
+        <div class="map">
+            <h2>Мы на карте</h2>
+            <iframe src="{{ map_embed_url }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+{% endblock content %}

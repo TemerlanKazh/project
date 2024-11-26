@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        {% for el in cars %}
+        <div class="col">
+            <div class="card shadow-sm">
+                <a href="{% url 'car_detail' el.id %}">
+                    <img src="{% static el.image %}" class="img-fluid">
+                </a>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">{{ el.title }}</text>
+                <div class="card-body">
+                    <p class="card-text">Цена: {{el.cost }} Тг</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

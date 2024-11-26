@@ -1,0 +1,93 @@
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    display: grid;
+    grid-template-areas:
+        "logo nav"
+        "title title";
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin-left: 10px; /* Уменьшаем расстояние справа */
+    transition: color 0.3s ease-in-out;
+}
+
+.nav a:hover {
+    color: #FFD700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.car {
+    width: 100%;
+}
+
+.car img {
+    max-width: 100%;
+    height: auto;
+}
+
+.car h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.car p {
+    font-size: 16px;
+}
+
+footer {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.unusual-design {
+    background: linear-gradient(45deg, #FF4E50, #FC913A);
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.unusual-design p {
+    margin: 10px 0;
+}

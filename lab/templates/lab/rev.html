@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="content">
+ {% for el in reviews %}
+
+<h1>{{ el.user }}</h1>
+<p>{{ el.rev }}</p>  <!-- Вывод описания автомобиля -->
+{% endfor %}
+
+</div>
+
+
+
+{% endblock content %}
